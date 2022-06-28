@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text--gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600;
+  }
+
+  .text--heading-1 {
+    @apply text--gradient font-extrabold text-4xl;
+  }
+
+  .text--btn {
+    @apply text-sm uppercase font-medium tracking-wider;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded text--btn inline-block cursor-pointer;
+  }
+  .btn--success {
+    @apply bg-gradient-to-tr from-success-500 to-success-600 text-white;
+  }
+  .btn--danger {
+    @apply bg-gradient-to-tr from-danger-500 to-danger-600 text-white;
+  }
+
+  label {
+    @apply flex flex-col text--btn cursor-pointer;
+  }
+  input,
+  textarea {
+    @apply border border-gray-300 px-4 py-2 rounded;
+  }
+
+  .input-error {
+    @apply border-danger-500;
+  }
+
+  .min-h-content {
+    @apply min-h-[calc(100vh-96px)];
+  }
+}
